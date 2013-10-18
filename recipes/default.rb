@@ -23,17 +23,20 @@ node["icecream"]["packages"].each do |name|
   end
 end
 
-template node["icecream"]["config_file"] do
-  source "icecream.conf.erb"
+template node["icecream"]["sysconfig_file"] do
+  source "sysconfig.conf.erb"
   owner "root"
   group "root"
   mode 0644
 
   variables(
-    node["icecream"]
+    node["openssh"]
   )
+
+  notifies :restart, "service[icecream]"
 end
 
-service node["icecream"]["service_name"] do
+service "icecream" do
+  service_name node["icecream"]["service_name"]
   action [:enable, :start]
 end

@@ -22,7 +22,7 @@ default["icecream"]["packages"] = %w(
 )
 
 default["icecream"]["service_name"] = "icecream"
-default["icecream"]["config_file"] = "/etc/sysconfig/icecream"
+default["icecream"]["sysconfig_file"] = "/etc/sysconfig/icecream"
 default["icecream"]["nice_level"] = "5"
 default["icecream"]["log_file"] = "/var/log/icecream/iceccd"
 default["icecream"]["run_scheduler"] = "no"
