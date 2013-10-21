@@ -30,7 +30,7 @@ template node["icecream"]["sysconfig_file"] do
   mode 0644
 
   variables(
-    node["openssh"]
+    node["icecream"]
   )
 
   notifies :restart, "service[icecream]"
