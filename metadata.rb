@@ -7,4 +7,4 @@ long_description IO.read(File.join(File.dirname(__FILE__), "README.md"))
 version "0.0.1"
 recipe "icecream", "Installs/Configures icecream"
 
-supports "suse"
+supports "suse", ">= 12.3"
